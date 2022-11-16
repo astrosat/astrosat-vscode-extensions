@@ -51,5 +51,8 @@
     "VisualStudioExptTeam.vscodeintellicode",
     "xabikos.ReactSnippets",
     "yzhang.markdown-all-in-one"
-  ]
+  ],
+  "devDependencies": {
+    "vsce": "^2.14.0"
+  }
 }
