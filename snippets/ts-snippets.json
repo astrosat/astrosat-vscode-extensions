@@ -1,5 +1,5 @@
 {
-  "create base typescript react functional component": {
+  "create typescript react functional component": {
       "prefix": "tsfc",
       "body": [
           "import React, { FC, ReactElement } from 'react';",
@@ -13,5 +13,76 @@
           "export default ${1:componentName};"
       ],
       "description": "typescript creat function component"
+    },
+    "react-query hook to fetch array of things": {
+      "prefix": "tsrqa",
+      "body": [
+          "import { useQuery } from '@tanstack/react-query';",
+          "import { z } from 'zod';",
+          "",
+          "export const ${1:typeName}Data = z.object({",
+          "});",
+          "",
+          "const ${1:typeName}s = z.array(${1:typeName}Data);",
+          "",
+          "export type ${1:typeName} = z.infer<typeof ${1:typeName}Data>;",
+          "",
+          "export const use${1:typeName}s = () => useQuery(['${1:typeName}'], async () => {",
+          "\tconst response = await fetch('2:url');",
+          "",
+          "\tif (!response.ok) {",
+          "\t\tconst error = await response.json();",
+          "",
+          "\t\tthrow new Error(`Error fetching, Message: ${error.message}`);",
+          "\t}",
+          "",
+          "\tconst data: ${1:typeName} = await response.json();",
+          "",
+          "\treturn ${1:typeName}s.parse(data);",
+          "},",
+          "{",
+          "\tkeepPreviousData: true,",
+          "},",
+          ");",
+          ""
+      ],
+      "description": "typescript react-query fetch array of things hook"
+    },
+    "react-query hook to create a thing": {
+      "prefix": "tsrqc",
+      "body": [
+          "import { useMutation, useQueryClient } from '@tanstack/react-query';",
+          "import { ${1:typeName}, ${1:typeName}Data } from './${1:typeName}s.hook';",
+          "",
+          "export const useCreate${1:typeName} = () => {",
+          "\tconst queryClient = useQueryClient();",
+          "",
+          "\treturn useMutation(",
+          "\t\tasync (${1:typeName}) => {",
+          "\t\t\tconst response = await fetch('${2:url}', {",
+          "\t\t\t\tmethod: 'POST',",
+          "\t\t\t\tbody: JSON.stringify(${1:typeName}),",
+          "\t\t\t});",
+          "",
+          "\t\t\tif (!response.ok) {",
+          "\t\t\t\tconst error = await response.json();",
+          "",
+          "\t\t\t\tthrow new Error(`Error fetching, Message: ${error.message}`);",
+          "\t\t\t}",
+          "",
+          "\t\t\tconst data: ${1:typeName} = await response.json();",
+          "",
+          "\t\t\treturn ${1:typeName}Data.parse(data);",
+          "\t\t},",
+          "\t\t{",
+          "\t\t\tonSettled: (): void => {",
+          "\t\t\t\tqueryClient.invalidateQueries(['${1:typeName}s']);",
+          "\t\t\t},",
+          "\t\t},",
+          "\t);",
+          "};",
+          ""
+      ],
+      "description": "typescript react-query create a thing hook"
   }
 }
