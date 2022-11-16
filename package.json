@@ -16,7 +16,8 @@
     "vscode": "^1.28.0"
   },
   "categories": [
-    "Extension Packs"
+    "Extension Packs",
+    "Snippets"
   ],
   "galleryBanner": {
     "color": "#00762a",
@@ -52,7 +53,15 @@
     "xabikos.ReactSnippets",
     "yzhang.markdown-all-in-one"
   ],
-  "devDependencies": {
+  "contributes": {
+    "snippets": [
+    {
+      "language": "typescript",
+      "path": "./snippets/ts-snippets.json"
+    }
+  ]
+},
+"devDependencies": {
     "vsce": "^2.14.0"
   }
 }
