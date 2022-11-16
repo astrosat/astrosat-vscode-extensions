@@ -3,6 +3,9 @@
   "displayName": "Mark Small's VSCode Extension Pack",
   "description": "Collection of mandatory extensions I use for development",
   "version": "1.0.0",
+  "scripts": {
+    "package": "vsce package"
+  },
   "publisher": "marksmall",
   "author": {
     "name": "marksmall",
