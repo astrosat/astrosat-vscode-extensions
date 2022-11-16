@@ -1,0 +1,52 @@
+{
+  "name": "vscode-extension-pack-marksmall",
+  "displayName": "Mark Small's VSCode Extension Pack",
+  "description": "Collection of mandatory extensions I use for development",
+  "version": "1.0.0",
+  "publisher": "marksmall",
+  "author": {
+    "name": "marksmall",
+    "url": "https://github.com/marksmall",
+    "email": "marksmall@gmx.com"
+  },
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "galleryBanner": {
+    "color": "#00762a",
+    "theme": "dark"
+  },
+  "icon": "jason.png",
+  "homepage": "https://github.com/marksmall",
+  "bugs": {
+    "url": "https://github.com/marksmall/vscode-extension-pack-marksmall/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marksmall/vscode-extension-pack-marksmall"
+  },
+  "extensionPack": [
+    "4ops.terraform",
+    "aaron-bond.better-comments",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-complete-tag",
+    "ms-azuretools.vscode-docker",
+    "MS-vsliveshare.vsliveshare-pack",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "naumovs.color-highlight",
+    "SimonSiefke.svg-preview",
+    "TabNine.tabnine-vscode",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "xabikos.ReactSnippets",
+    "yzhang.markdown-all-in-one"
+  ]
+}
