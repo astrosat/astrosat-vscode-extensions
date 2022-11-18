@@ -53,7 +53,7 @@
     "TabNine.tabnine-vscode",
     "VisualStudioExptTeam.vscodeintellicode",
     "xabikos.ReactSnippets",
-    "yzhang.markdown-all-in-one"    
+    "yzhang.markdown-all-in-one"
   ],
   "contributes": {
     "snippets": [
