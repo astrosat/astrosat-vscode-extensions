@@ -37,21 +37,23 @@
     "4ops.terraform",
     "aaron-bond.better-comments",
     "bradlc.vscode-tailwindcss",
+    "bungcip.better-toml",
     "dbaeumer.vscode-eslint",
     "dsznajder.es7-react-js-snippets",
     "eamodio.gitlens",
     "esbenp.prettier-vscode",
     "formulahendry.auto-complete-tag",
+    "mikestead.dotenv",
     "ms-azuretools.vscode-docker",
     "MS-vsliveshare.vsliveshare-pack",
     "ms-python.python",
-    "ms-python.vscode-pylance",
     "naumovs.color-highlight",
+    "pdconsec.vscode-print",
     "SimonSiefke.svg-preview",
     "TabNine.tabnine-vscode",
     "VisualStudioExptTeam.vscodeintellicode",
     "xabikos.ReactSnippets",
-    "yzhang.markdown-all-in-one"
+    "yzhang.markdown-all-in-one"    
   ],
   "contributes": {
     "snippets": [
@@ -63,9 +65,12 @@
         "language": "typescriptreact",
         "path": "./snippets/tsx-snippets.json"
       }
-      ]
-},
-"devDependencies": {
+    ]
+  },
+  "devDependencies": {
     "vsce": "^2.14.0"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
   }
 }
